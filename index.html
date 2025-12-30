@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kawale Private Secondary | Official Portal</title>
+    <title>Magawa Secondary | Official Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -16,10 +16,10 @@
             }
         }
 
-        const GITHUB_CONFIG = { owner: "kawalepvt", repo: "ui", path: "data/content.json" };
+        const GITHUB_CONFIG = { owner: "magawass", repo: "ui", path: "data/content.json" };
         let adminContent = {
-            headerTitle: "Success Guaranteed",
-            headerSub: "  ",
+            headerTitle: "Quality Education",
+            headerSub: "Enter to learn, depart to serve",
             headerImg: "",
             announcements: "",
             aboutText: "",
@@ -68,15 +68,15 @@
                     renderAdminLists();
                 }
             } catch (error) {
-                adminContent = JSON.parse(localStorage.getItem('kawaleAdminContent')) || adminContent;
+                adminContent = JSON.parse(localStorage.getItem('magawaAdminContent')) || adminContent;
                 updateDisplayContent();
                 renderAdminLists();
             }
         }
 
         function updateDisplayContent() {
-            document.getElementById('displayHeaderTitle').innerText = adminContent.headerTitle || "Education for Everyone";
-            document.getElementById('displayHeaderSub').innerHTML = adminContent.headerSub || "    ";
+            document.getElementById('displayHeaderTitle').innerText = adminContent.headerTitle || "Quality Education";
+            document.getElementById('displayHeaderSub').innerHTML = adminContent.headerSub || "Enter to learn, depart to serve";
             const hImg = document.getElementById('displayHeader');
             if(adminContent.headerImg) {
                 hImg.src = adminContent.headerImg;
@@ -220,12 +220,12 @@
                 const syncRes = await fetch(url, {
                     method: 'PUT',
                     headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: "Update Kawale Content", content: base64Content, sha: sha })
+                    body: JSON.stringify({ message: "Update Magawa Content", content: base64Content, sha: sha })
                 });
 
                 if (syncRes.ok) {
                     setSyncStatus("✅ SUCCESSFULLY SAVED!");
-                    localStorage.setItem('kawaleAdminContent', finalJson);
+                    localStorage.setItem('magawaAdminContent', finalJson);
                     updateDisplayContent();
                 } else {
                     const errData = await syncRes.json();
@@ -240,7 +240,7 @@
         }
 
         function authenticateAdmin() {
-            if (document.getElementById('adminPass').value === 'admin1') {
+            if (document.getElementById('adminPass').value === 'admin123') {
                 showPage('adminPanel');
                 updateDisplayContent();
             }
@@ -265,8 +265,8 @@
     <nav id="mainNav" class="bg-primary text-white sticky top-0 z-50 p-3 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <img src="https://raw.githubusercontent.com/magawass/kw2/main/logo.png" class="h-10 w-10 rounded-full border border-secondary">
-                <span class="font-bold text-lg">KAWALE PRIVATE SECONDARY</span>
+                <img src="https://raw.githubusercontent.com/magawass/m/main/logo.png" class="h-10 w-10 rounded-full border border-secondary">
+                <span class="font-bold text-lg">MAGAWA SECONDARY</span>
             </div>
             <div class="hidden md:flex space-x-6 text-xs font-bold uppercase">
                 <button onclick="showPage('homePage')">Home</button>
@@ -345,7 +345,7 @@
                 <div class="space-y-4">
                     <div class="section-box">
                         <label class="label-text">0. Main Header Settings</label>
-                        <input type="text" id="adminHeaderTitle" class="admin-input" placeholder="Main Title (e.g. Education for ALL)">
+                        <input type="text" id="adminHeaderTitle" class="admin-input" placeholder="Main Title (e.g. Quality Education)">
                         <textarea id="adminHeaderSub" class="admin-input h-12" placeholder="Sub-statement (use <span> tags for colors)"></textarea>
                         <label class="text-[10px] text-gray-400">Header Icon/Image:</label>
                         <input type="file" id="adminHeaderFile" class="text-[10px] mb-2 block w-full">
@@ -396,7 +396,7 @@
         <div id="portalContainer" class="page">
             <div class="bg-white p-3 border-b flex justify-between items-center">
                 <button onclick="showPage('homePage')" class="text-primary font-bold px-4">EXIT</button>
-                <div class="text-xs font-black tracking-widest">  </div>
+                <div class="text-xs font-black tracking-widest">MAGAWA STUDENT PORTAL</div>
                 <div class="w-10"></div>
             </div>
             <iframe src="brief22_BUTTONS_FIXED.html"></iframe>
@@ -404,9 +404,8 @@
     </main>
 
     <footer id="mainFooter" class="py-10 text-center text-[10px] text-gray-400 uppercase tracking-widest border-t mt-10">
-        © 2025 Kawale Private Secondary School.Designed by Chiku Lubaini(099 40 39 325). All rights reserved.
+        © 2024 Magawa Secondary School.
     </footer>
 
 </body>
-
 </html>
