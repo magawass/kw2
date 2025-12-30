@@ -16,7 +16,7 @@
             }
         }
 
-        const GITHUB_CONFIG = { owner: "magawass", repo: "ui", path: "data/content.json" };
+        const GITHUB_CONFIG = { owner: "magawass", repo: "kw2", path: "data/content.json" };
         let adminContent = {
             headerTitle: "Quality Education",
             headerSub: "Enter to learn, depart to serve",
@@ -75,8 +75,8 @@
         }
 
         function updateDisplayContent() {
-            document.getElementById('displayHeaderTitle').innerText = adminContent.headerTitle || "Quality Education";
-            document.getElementById('displayHeaderSub').innerHTML = adminContent.headerSub || "Enter to learn, depart to serve";
+            document.getElementById('displayHeaderTitle').innerText = adminContent.headerTitle || "Success Guaranteed";
+            document.getElementById('displayHeaderSub').innerHTML = adminContent.headerSub || "Education for ALL";
             const hImg = document.getElementById('displayHeader');
             if(adminContent.headerImg) {
                 hImg.src = adminContent.headerImg;
@@ -266,7 +266,7 @@
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
                 <img src="https://raw.githubusercontent.com/magawass/m/main/logo.png" class="h-10 w-10 rounded-full border border-secondary">
-                <span class="font-bold text-lg">MAGAWA SECONDARY</span>
+                <span class="font-bold text-lg">KAWALE PRIVATE SECONDARY</span>
             </div>
             <div class="hidden md:flex space-x-6 text-xs font-bold uppercase">
                 <button onclick="showPage('homePage')">Home</button>
@@ -281,15 +281,15 @@
             <div class="bg-primary rounded-3xl p-10 text-white flex justify-between items-center">
                 <div class="w-2/3">
                     <div class="flex items-center space-x-4 mb-1">
-                        <h2 id="displayHeaderTitle" class="text-3xl font-black uppercase">Quality Education</h2>
+                        <h2 id="displayHeaderTitle" class="text-3xl font-black uppercase">Success Guaranteed</h2>
                         <img id="displayHeaderImg" src="" class="h-12 w-12 object-cover rounded-full hidden border-2 border-secondary">
                     </div>
                     <p id="displayHeaderSub" class="mb-4 font-bold italic">
-                        <span class="text-white">Enter to learn,</span> 
-                        <span class="text-secondary">depart to serve</span>
+                        <span class="text-white">Success,</span> 
+                        <span class="text-secondary">Guaranteed</span>
                     </p>
                     <p id="displayAboutText" class="opacity-90 mb-6"></p>
-                    <button onclick="openPortal()" class="bg-white text-primary px-6 py-2 rounded-lg font-bold">Open Portal</button>
+                    <button onclick="openPortal()" class="bg-white text-primary px-6 py-2 rounded-lg font-bold">Exam Portal</button>
                 </div>
                 <i class="fas fa-graduation-cap text-[100px] opacity-30"></i>
             </div>
@@ -345,7 +345,7 @@
                 <div class="space-y-4">
                     <div class="section-box">
                         <label class="label-text">0. Main Header Settings</label>
-                        <input type="text" id="adminHeaderTitle" class="admin-input" placeholder="Main Title (e.g. Quality Education)">
+                        <input type="text" id="adminHeaderTitle" class="admin-input" placeholder="Main Title (e.g. Education for ALL)">
                         <textarea id="adminHeaderSub" class="admin-input h-12" placeholder="Sub-statement (use <span> tags for colors)"></textarea>
                         <label class="text-[10px] text-gray-400">Header Icon/Image:</label>
                         <input type="file" id="adminHeaderFile" class="text-[10px] mb-2 block w-full">
@@ -396,7 +396,7 @@
         <div id="portalContainer" class="page">
             <div class="bg-white p-3 border-b flex justify-between items-center">
                 <button onclick="showPage('homePage')" class="text-primary font-bold px-4">EXIT</button>
-                <div class="text-xs font-black tracking-widest">MAGAWA STUDENT PORTAL</div>
+                <div class="text-xs font-black tracking-widest">    </div>
                 <div class="w-10"></div>
             </div>
             <iframe src="brief22_BUTTONS_FIXED.html"></iframe>
@@ -404,7 +404,7 @@
     </main>
 
     <footer id="mainFooter" class="py-10 text-center text-[10px] text-gray-400 uppercase tracking-widest border-t mt-10">
-        © 2024 Magawa Secondary School.
+        © 2025 Kawale Private Secondary School.Designed by Chiku Lubaini(099 40 39 325).All rights reserved.
     </footer>
 
 </body>
