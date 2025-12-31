@@ -16,7 +16,7 @@
             }
         }
 
-        const GITHUB_CONFIG = { owner: "kawale", repo: "kw2", path: "data/content.json" };
+        const GITHUB_CONFIG = { owner: "kawale", repo: "kw", path: "data/content.json" };
         let adminContent = {
             headerTitle: "Quality Education",
             headerSub: "     ",
@@ -240,7 +240,7 @@
         }
 
         function authenticateAdmin() {
-            if (document.getElementById('adminPass').value === 'admin123') {
+            if (document.getElementById('adminPass').value === '000') {
                 showPage('adminPanel');
                 updateDisplayContent();
             }
